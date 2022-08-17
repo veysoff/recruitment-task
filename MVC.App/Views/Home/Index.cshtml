@@ -1,0 +1,10 @@
+﻿@using MVC.App.Resources
+@inject LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = @SharedLocalizer.GetLocalizedHtmlString("homePage");
+}
+
+<div class="text-center">
+    <h1 class="display-4">@SharedLocalizer.GetLocalizedHtmlString("welcome")</h1>
+</div>

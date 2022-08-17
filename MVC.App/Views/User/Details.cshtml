@@ -1,0 +1,23 @@
+﻿@model MVC.App.Models.UserViewModel
+@inject LocalizationService SharedLocalizer
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @SharedLocalizer.GetLocalizedHtmlString(nameof(UserViewModel.Nickname))
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nickname)
+        </dd>
+        <dt class = "col-sm-2">
+            @SharedLocalizer.GetLocalizedHtmlString(nameof(UserViewModel.Email))
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("backToForm")</a>
+</div>
+
